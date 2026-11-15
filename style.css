@@ -1,0 +1,300 @@
+/* GENERAL STYLING */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #263238;
+    line-height: 1.6;
+}
+
+/* HEADER AND NAVIGATION */
+header {
+    background: #102a43;
+    color: white;
+    padding: 22px 6%;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 15px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 9px 14px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: #168aad;
+}
+
+/* HOMEPAGE */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 70px 8%;
+    min-height: 430px;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h2 {
+    font-size: 36px;
+    margin: 15px 0;
+}
+
+.hero-content h2 span {
+    color: #168aad;
+}
+
+.hero-content h3 {
+    margin-bottom: 15px;
+}
+
+.tag {
+    color: #168aad;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.profile img {
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid white;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.welcome {
+    text-align: center;
+    padding: 45px 8%;
+    background: white;
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    background: #168aad;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #102a43;
+    transform: translateY(-2px);
+}
+
+/* OTHER PAGES */
+.page-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.page-container > h2 {
+    color: #102a43;
+    margin-bottom: 12px;
+    font-size: 30px;
+}
+
+.content-card {
+    background: white;
+    padding: 25px;
+    margin: 22px 0;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+    transition: 0.3s;
+}
+
+.content-card:hover {
+    transform: translateY(-3px);
+}
+
+.content-card h3 {
+    color: #168aad;
+    margin-bottom: 12px;
+}
+
+.content-card ul {
+    padding-left: 22px;
+}
+
+/* PROJECTS */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.project-grid .content-card {
+    margin: 0;
+}
+
+.project-grid img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 7px;
+    margin-bottom: 12px;
+}
+
+.project-grid a {
+    color: #168aad;
+    font-weight: bold;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background: #102a43;
+    color: white;
+}
+
+/* FORMS */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccd5df;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+input:focus, textarea:focus {
+    outline: 2px solid #168aad;
+    border-color: #168aad;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* ACADEMIC TASK LIST */
+#taskList {
+    list-style: none;
+    margin-top: 15px;
+}
+
+#taskList li {
+    background: #f0f5f9;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#taskList button {
+    padding: 7px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 3px;
+}
+
+#taskList button:hover {
+    opacity: 0.8;
+}
+
+/* FOOTER */
+footer {
+    background: #102a43;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* ANIMATION */
+.hero-content, .content-card {
+    animation: appear 0.7s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 6%;
+    }
+
+    .profile img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        gap: 5px;
+    }
+
+    nav a {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .page-container {
+        margin: 20px auto;
+    }
+}

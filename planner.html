@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>My Student Portfolio</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="planner.html">Academic Planner</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<main class="page-container">
+    <h2>My Academic Planner</h2>
+    <p>Use this planner to organise your assignments, studies and deadlines.</p>
+
+    <section class="content-card">
+        <h3>Add a New Task</h3>
+
+        <form id="taskForm">
+            <label for="taskInput">Task description:</label>
+            <input type="text" id="taskInput" placeholder="Enter your task" required>
+
+            <label for="taskDate">Due date:</label>
+            <input type="date" id="taskDate" required>
+
+            <button type="submit" class="btn">Add Task</button>
+        </form>
+    </section>
+
+    <section class="content-card">
+        <h3>My Tasks</h3>
+        <ul id="taskList">
+        </ul>
+        <p id="emptyMessage">You have no tasks yet.</p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 My Student Portfolio | COS 106 Project</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
